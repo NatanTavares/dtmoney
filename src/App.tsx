@@ -1,17 +1,20 @@
+import { TransactionsProvider } from "./contexts/TransactionsContext";
+import { ModalProvider } from "./contexts/ModalContext";
 import { Dashboard } from "./components/Dashboard";
 import { Header } from "./components/Header";
-import { ModalProvider } from "./contexts/ModalContext";
 
 import { GlobalStyle } from "./styles/global";
 
 export function App() {
   return (
     <>
-      <ModalProvider>
-        <Header />
-        <Dashboard />
-        <GlobalStyle />
-      </ModalProvider>
+      <TransactionsProvider>
+        <ModalProvider>
+          <Header />
+          <Dashboard />
+        </ModalProvider>
+      </TransactionsProvider>
+      <GlobalStyle />
     </>
   );
 }
