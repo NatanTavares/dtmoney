@@ -36,13 +36,6 @@ export function ModalProvider({ children }: ModalProviderProps) {
         handleCloseNewTransactionModal,
       }}
     >
-      {/* <Modal
-        isOpen={isNewTransactionModalOpen}
-        onRequestClose={handleCloseNewTransactionModal}
-      >
-        <h2>DEMO</h2>
-      </Modal> */}
-
       <NewTransactionModal />
       {children}
     </ModalContext.Provider>
